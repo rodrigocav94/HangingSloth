@@ -11,12 +11,14 @@ class ViewController: UIViewController {
     let remaining = UILabel()
     var slothImageView = UIImageView(image: #imageLiteral(resourceName: "sloth.png"))
     let guessWord = UILabel()
+    let hints = UILabel()
     var letters = [UIButton]()
     
-    var answer = "SLOTH"
+    var answer: Answer?
     var mistakesRemaining = 7 {
         didSet {
             remaining.text = "Mistakes remaining: \(mistakesRemaining)"
+            slothImageView.layer.opacity = (Float(mistakesRemaining) * 15) / 100
         }
     }
     var guess = "" {
@@ -60,7 +62,6 @@ class ViewController: UIViewController {
         guessWord.sizeToFit()
         view.addSubview(guessWord)
         
-        let hints = UILabel()
         hints.translatesAutoresizingMaskIntoConstraints = false
         hints.font = UIFont.preferredFont(forTextStyle: .body)
         hints.text = "1. Is a Sloth\n2. Is a Sloth\n3. Is a Sloth"
@@ -161,9 +162,17 @@ class ViewController: UIViewController {
     @objc func letterTapped(_ sender: UIButton) {
         guard let text = sender.titleLabel?.text else { return }
         
-        if let guessIndex = answer.map({ String($0) }).firstIndex(of: text) {
+        let answerLettersArray = answer?.word.map({ String($0) })
+        let letterIndices = answerLettersArray?.enumerated().compactMap {
+            $0.element == text ? $0.offset : nil
+        }
+        
+        
+        if let letterIndices, !letterIndices.isEmpty {
             var guessWordArray = guess.map { String($0) }
-            guessWordArray[guessIndex] = text
+            for index in letterIndices {
+                guessWordArray[index] = text
+            }
             guess = guessWordArray.joined()
         } else {
             mistakesRemaining -= 1
@@ -173,9 +182,20 @@ class ViewController: UIViewController {
     }
     
     func loadLevel() {
-        guess = answer.map { _ in
+        for letter in letters {
+            letter.isHidden = false
+        }
+        guard let newAnswer = Answer.all.randomElement() else { return }
+        answer = newAnswer
+        guess = newAnswer.word.map { _ in
             "_"
         }.joined()
+        
+        var hintsText = ""
+        for (index, hint) in newAnswer.hints.enumerated() {
+            hintsText += "\(index + 1). \(hint)\n"
+        }
+        hints.text = hintsText.trimmingCharacters(in: .whitespacesAndNewlines)
     }
     
 }

@@ -1,0 +1,154 @@
+[
+   {
+      "word":"ELEPHANT",
+      "hints":[
+         "Largest land mammal.",
+         "Has a long trunk.",
+         "Known for its memory."
+      ]
+   },
+   {
+      "word":"GUITAR",
+      "hints":[
+         "Musical instrument with strings.",
+         "Often used in rock and folk music.",
+         "Played by strumming or plucking."
+      ]
+   },
+   {
+      "word":"PIZZA",
+      "hints":[
+         "Italian dish.",
+         "Typically topped with cheese and tomato sauce.",
+         "Often served in triangular slices."
+      ]
+   },
+   {
+      "word":"DRAGON",
+      "hints":[
+         "Mythical creature.",
+         "Often depicted with wings and breathing fire.",
+         "Featured in many fantasy stories."
+      ]
+   },
+   {
+      "word":"BANANA",
+      "hints":[
+         "Yellow fruit.",
+         "Commonly peeled before eating.",
+         "Grows on trees in clusters."
+      ]
+   },
+   {
+      "word":"LIBRARY",
+      "hints":[
+         "A place with lots of books.",
+         "Often has quiet reading areas.",
+         "Offers borrowing services."
+      ]
+   },
+   {
+      "word":"OCTOPUS",
+      "hints":[
+         "Sea creature with eight arms.",
+         "Known for its intelligence.",
+         "Often found in oceans."
+      ]
+   },
+   {
+      "word":"SOCCER",
+      "hints":[
+         "Popular sport played with a round ball.",
+         "Also known as football in many countries.",
+         "Involves kicking the ball into a goal."
+      ]
+   },
+   {
+      "word":"CHOCOLATE",
+      "hints":[
+         "Sweet treat made from cocoa beans.",
+         "Comes in various forms such as bars or candies.",
+         "Often enjoyed as a dessert."
+      ]
+   },
+   {
+      "word":"UNICORN",
+      "hints":[
+         "Mythical horse-like creature with a horn.",
+         "Often depicted as white or colorful.",
+         "Symbolizes purity and magic."
+      ]
+   },
+   {
+      "word":"RAINBOW",
+      "hints":[
+         "Colorful arc in the sky.",
+         "Forms after rain and sunlight.",
+         "Consists of seven colors."
+      ]
+   },
+   {
+      "word":"TORNADO",
+      "hints":[
+         "Powerful rotating column of air.",
+         "Can cause significant destruction.",
+         "Often forms during severe weather."
+      ]
+   },
+   {
+      "word":"BUTTERFLY",
+      "hints":[
+         "Insect with colorful wings.",
+         "Undergoes metamorphosis.",
+         "Pollinates flowers."
+      ]
+   },
+   {
+      "word":"TELESCOPE",
+      "hints":[
+         "Optical instrument for viewing distant objects.",
+         "Used by astronomers to observe celestial bodies.",
+         "Can magnify distant objects."
+      ]
+   },
+   {
+      "word":"PENGUIN",
+      "hints":[
+         "Flightless bird found in the Southern Hemisphere.",
+         "Often has black and white plumage.",
+         "Known for its waddling walk."
+      ]
+   },
+   {
+      "word":"UMBRELLA",
+      "hints":[
+         "Device used for protection against rain or sun.",
+         "Can be folded for easy carrying.",
+         "Typically has a canopy and a handle."
+      ]
+   },
+   {
+      "word":"SUBMARINE",
+      "hints":[
+         "Watercraft capable of underwater operation.",
+         "Used for military, research, or exploration purposes.",
+         "Can travel below the surface of the ocean."
+      ]
+   },
+   {
+      "word":"VOLCANO",
+      "hints":[
+         "Mountain that erupts with lava and ash.",
+         "Often found at tectonic plate boundaries.",
+         "Can be dormant, active, or extinct."
+      ]
+   },
+   {
+      "word":"CATERPILLAR",
+      "hints":[
+         "Larval stage of a butterfly or moth.",
+         "Often seen crawling on leaves.",
+         "Eats voraciously before pupating."
+      ]
+   }
+]
