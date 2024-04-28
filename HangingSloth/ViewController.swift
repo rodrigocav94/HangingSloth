@@ -29,8 +29,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupConstraints()
         loadLevel()
+        setupConstraints()
     }
     
     func setupConstraints() {
@@ -56,14 +56,13 @@ class ViewController: UIViewController {
         
         guessWord.translatesAutoresizingMaskIntoConstraints = false
         guessWord.font = UIFont.systemFont(ofSize: 24, weight: .heavy)
-        guessWord.text = ""
+        guessWord.addCharactersSpacing(10)
         guessWord.textColor = .brown
         guessWord.sizeToFit()
         view.addSubview(guessWord)
         
         hints.translatesAutoresizingMaskIntoConstraints = false
         hints.font = UIFont.preferredFont(forTextStyle: .body)
-        hints.text = "1. Is a Sloth\n2. Is a Sloth\n3. Is a Sloth"
         hints.numberOfLines = 0
         hints.sizeToFit()
         hints.setContentHuggingPriority(UILayoutPriority(1), for: .vertical)
@@ -218,7 +217,6 @@ class ViewController: UIViewController {
             hintsText += "\(index + 1). \(hint)\n"
         }
         hints.text = hintsText.trimmingCharacters(in: .whitespacesAndNewlines)
-        guessWord.addCharactersSpacing(10)
     }
     
 }

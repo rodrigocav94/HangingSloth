@@ -150,5 +150,221 @@
          "Often seen crawling on leaves.",
          "Eats voraciously before pupating."
       ]
+   },
+   {
+       "word": "LIGHTHOUSE",
+       "hints": [
+           "Tower with a bright light at the top.",
+           "Guides ships at sea.",
+           "Often located on coastal areas."
+       ]
+   },
+   {
+       "word": "SANDWICH",
+       "hints": [
+           "Food item consisting of bread with filling.",
+           "Popular lunch option.",
+           "Comes in various types like club, BLT, and PB&J."
+       ]
+   },
+   {
+       "word": "SANDCASTLE",
+       "hints": [
+           "Structure built of sand near water.",
+           "Often made with buckets and shovels.",
+           "Decorated with shells and flags."
+       ]
+   },
+   {
+       "word": "HOTDOG",
+       "hints": [
+           "Type of sausage served in a bun.",
+           "Often topped with mustard, ketchup, or relish.",
+           "Popular at sporting events and barbecues."
+       ]
+   },
+   {
+       "word": "SKYSCRAPER",
+       "hints": [
+           "Tall building with many floors.",
+           "Common in urban landscapes.",
+           "Often made of steel and glass."
+       ]
+   },
+   {
+       "word": "MAGNET",
+       "hints": [
+           "Object that produces a magnetic field.",
+           "Attracts objects made of iron, nickel, or cobalt.",
+           "Comes in various shapes and sizes."
+       ]
+   },
+   {
+       "word": "RAINBOW",
+       "hints": [
+           "Colorful arc in the sky.",
+           "Forms after rain and sunlight.",
+           "Consists of seven colors."
+       ]
+   },
+   {
+       "word": "OXYGEN",
+       "hints": [
+           "Chemical element with symbol O.",
+           "Critical for respiration in living organisms.",
+           "Makes up about 21% of Earth's atmosphere."
+       ]
+   },
+   {
+       "word": "TIGER",
+       "hints": [
+           "Large feline with orange fur and black stripes.",
+           "Apex predator in its habitat.",
+           "Native to Asia."
+       ]
+   },
+   {
+       "word": "RAINDROP",
+       "hints": [
+           "Small sphere of water falling from the sky.",
+           "Forms from condensed water vapor.",
+           "Collects in puddles or runs off surfaces."
+       ]
+   },
+   {
+       "word": "ROBOT",
+       "hints": [
+           "Mechanical or virtual artificial agent.",
+           "Performs tasks automatically.",
+           "Used in manufacturing, exploration, and entertainment."
+       ]
+   },
+   {
+       "word": "ICEBERG",
+       "hints": [
+           "Large piece of freshwater ice floating in the sea.",
+           "Most of its mass is submerged underwater.",
+           "Often calved from glaciers."
+       ]
+   },
+   {
+       "word": "SQUIRREL",
+       "hints": [
+           "Small rodent with bushy tail.",
+           "Often seen climbing trees.",
+           "Stores nuts for winter."
+       ]
+   },
+   {
+       "word": "CARNIVAL",
+       "hints": [
+           "Festive celebration with music, parades, and entertainment.",
+           "Often held before Lent in many cultures.",
+           "Features costumes, masks, and street performances."
+       ]
+   },
+   {
+       "word": "RAINCOAT",
+       "hints": [
+           "Outer garment worn to protect against rain.",
+           "Often made of waterproof material.",
+           "Has a hood to shield the head."
+       ]
+   },
+   {
+       "word": "JELLYFISH",
+       "hints": [
+           "Marine creature with gelatinous body.",
+           "Has trailing tentacles equipped with stinging cells.",
+           "Moves by pulsating its umbrella-shaped bell."
+       ]
+   },
+   {
+       "word": "CACTUS",
+       "hints": [
+           "Thorny desert plant.",
+           "Stores water in its succulent tissues.",
+           "Adapted to survive in arid environments."
+       ]
+   },
+   {
+       "word": "PIANO",
+       "hints": [
+           "Musical instrument with keys.",
+           "Produces sound by striking strings with hammers.",
+           "Comes in various sizes from grand to upright."
+       ]
+   },
+   {
+       "word": "SNOWFLAKE",
+       "hints": [
+           "Ice crystal that falls from the sky.",
+           "Forms in clouds when water vapor condenses.",
+           "Each one has a unique and intricate shape."
+       ]
+   },
+   {
+       "word": "SUNGLASSES",
+       "hints": [
+           "Eyewear designed to protect eyes from sunlight.",
+           "Often tinted to reduce glare.",
+           "Can be worn as a fashion accessory."
+       ]
+   },
+   {
+       "word": "ZEBRA",
+       "hints": [
+           "African equid with black and white stripes.",
+           "Has a distinctive striped coat.",
+           "Often seen in savannah habitats."
+       ]
+   },
+   {
+       "word": "BICYCLE",
+       "hints": [
+           "Two-wheeled vehicle propelled by pedals.",
+           "Common mode of transportation and recreation.",
+           "Comes in various types such as mountain, road, and cruiser."
+       ]
+   },
+   {
+       "word": "TELEPHONE",
+       "hints": [
+           "Communication device for voice transmission over distances.",
+           "Invented by Alexander Graham Bell.",
+           "Can be landline or mobile."
+       ]
+   },
+   {
+       "word": "MOONLIGHT",
+       "hints": [
+           "Natural light from the moon.",
+           "Illuminates landscapes at night.",
+           "Creates romantic ambiance."
+       ]
+   },
+   {
+       "word": "WHALE",
+       "hints": [
+           "Large marine mammal.",
+           "Breathes air through blowholes.",
+           "Includes species like blue, humpback, and sperm."
+       ]
+   },
+   {
+       "word": "RAINFOREST",
+       "hints": [
+           "Lush forest with high rainfall.",
+           "Biodiverse ecosystem.",
+           "Found in tropical regions."
+       ]
+   },
+   {
+       "word": "FIREWORKS",
+       "hints": [
+           "Explosive displays of light and color.",
+           "Often seen during celebrations.",
+           "Launches into the sky from tubes."
+       ]
    }
 ]
