@@ -24,3 +24,18 @@ extension Answer {
         return jsonPetitions
     }()
 }
+
+extension Answer {
+    var enumeratedHints: [String] {
+        hints.enumerated().map {
+            "\($0.offset + 1). \($0.element)"
+        }
+    }
+    
+    var fullHint: String {
+        let enumeratedHints = enumeratedHints.joined(separator: "\n")
+        let hintsTitle = "Hints:\n"
+        
+        return hintsTitle + enumeratedHints
+    }
+}

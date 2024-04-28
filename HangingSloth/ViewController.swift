@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     var letters = [UIButton]()
     
     var answer: Answer?
+    var hintsRevealed = 0
     var mistakesRemaining = 7 {
         didSet {
             remaining.text = "Mistakes remaining: \(mistakesRemaining)"
@@ -174,6 +175,9 @@ class ViewController: UIViewController {
             guess = guessWordArray.joined()
         } else {
             mistakesRemaining -= 1
+            if mistakesRemaining > 0 && mistakesRemaining % 2 == 0 {
+                revealHint()
+            }
         }
         
         sender.isHidden = true
@@ -202,6 +206,7 @@ class ViewController: UIViewController {
     }
     
     func loadLevel(_ action: UIAlertAction = UIAlertAction()) {
+        hintsRevealed = 0
         mistakesRemaining = 7
         for letter in letters {
             letter.isHidden = false
@@ -212,11 +217,39 @@ class ViewController: UIViewController {
             "_"
         }.joined()
         
-        var hintsText = ""
-        for (index, hint) in newAnswer.hints.enumerated() {
-            hintsText += "\(index + 1). \(hint)\n"
-        }
-        hints.text = hintsText.trimmingCharacters(in: .whitespacesAndNewlines)
+        let enumeratedHints = newAnswer.enumeratedHints.joined(separator: "\n")
+        
+        let rangeOfColoredString = (newAnswer.fullHint as NSString).range(of: enumeratedHints)
+        
+        // Create the attributedString.
+        let attributedString = NSMutableAttributedString(string: newAnswer.fullHint)
+        attributedString.setAttributes(
+            [
+                NSAttributedString.Key.backgroundColor: UIColor.quaternaryLabel,
+                NSAttributedString.Key.foregroundColor: UIColor.clear
+            ],
+            range: rangeOfColoredString
+        )
+        
+        hints.attributedText = attributedString
+    }
+    
+    func revealHint() {
+        let attributedString = hints.attributedText?.mutableCopy() as! NSMutableAttributedString
+        let fullHint = answer?.fullHint ?? ""
+        let hintRange = answer?.enumeratedHints[hintsRevealed]
+        let rangeOfColoredString = (fullHint as NSString).range(of: hintRange ?? "")
+        
+        attributedString.setAttributes(
+            [
+                NSAttributedString.Key.backgroundColor: UIColor.clear,
+                NSAttributedString.Key.foregroundColor: UIColor.label
+            ],
+            range: rangeOfColoredString
+        )
+        
+        hints.attributedText = attributedString
+        hintsRevealed += 1
     }
     
 }
