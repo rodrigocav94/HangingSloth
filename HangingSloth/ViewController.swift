@@ -8,24 +8,30 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var mistakesRemaining = 7
+    let remaining = UILabel()
     var slothImageView = UIImageView(image: #imageLiteral(resourceName: "sloth.png"))
     let guessWord = UILabel()
     var letters = [UIButton]()
     
-    var typedAnswer = "" {
+    var answer = "SLOTH"
+    var mistakesRemaining = 7 {
         didSet {
-            if typedAnswer.isEmpty {
-                guessWord.text = "______"
-            } else {
-                guessWord.text = typedAnswer
-            }
+            remaining.text = "Mistakes remaining: \(mistakesRemaining)"
         }
     }
-
+    var guess = "" {
+        didSet {
+            guessWord.text = guess
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupConstraints()
+        loadLevel()
+    }
+    
+    func setupConstraints() {
         let title = UILabel()
         title.translatesAutoresizingMaskIntoConstraints = false
         title.font = UIFont.systemFont(ofSize: 24, weight: .heavy)
@@ -34,7 +40,6 @@ class ViewController: UIViewController {
         title.sizeToFit()
         view.addSubview(title)
         
-        let remaining = UILabel()
         remaining.translatesAutoresizingMaskIntoConstraints = false
         remaining.font = UIFont.preferredFont(forTextStyle: .body)
         remaining.text = "Mistakes remaining: \(mistakesRemaining)"
@@ -49,7 +54,7 @@ class ViewController: UIViewController {
         
         guessWord.translatesAutoresizingMaskIntoConstraints = false
         guessWord.font = UIFont.systemFont(ofSize: 24, weight: .heavy)
-        guessWord.text = "______"
+        guessWord.text = ""
         guessWord.addCharactersSpacing(10)
         guessWord.textColor = .brown
         guessWord.sizeToFit()
@@ -94,7 +99,7 @@ class ViewController: UIViewController {
                 if row == 2 && col == 8 {
                     break
                 }
-                    
+                
                 let currentLetter = letters[letterIndex]
                 lazy var previousLetter = letters[letterIndex - 1]
                 
@@ -152,14 +157,25 @@ class ViewController: UIViewController {
             
         ])
     }
-
+    
     @objc func letterTapped(_ sender: UIButton) {
         guard let text = sender.titleLabel?.text else { return }
-        typedAnswer += text
+        
+        if let guessIndex = answer.map({ String($0) }).firstIndex(of: text) {
+            var guessWordArray = guess.map { String($0) }
+            guessWordArray[guessIndex] = text
+            guess = guessWordArray.joined()
+        } else {
+            mistakesRemaining -= 1
+        }
+        
+        sender.isHidden = true
     }
     
     func loadLevel() {
-        
+        guess = answer.map { _ in
+            "_"
+        }.joined()
     }
-
+    
 }
