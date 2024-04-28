@@ -37,7 +37,7 @@ class ViewController: UIViewController {
         let title = UILabel()
         title.translatesAutoresizingMaskIntoConstraints = false
         title.font = UIFont.systemFont(ofSize: 24, weight: .heavy)
-        title.text = "Don't let the sloth go away!"
+        title.text = "Don't let the sloth get away!"
         title.textColor = .brown
         title.sizeToFit()
         view.addSubview(title)
@@ -57,7 +57,6 @@ class ViewController: UIViewController {
         guessWord.translatesAutoresizingMaskIntoConstraints = false
         guessWord.font = UIFont.systemFont(ofSize: 24, weight: .heavy)
         guessWord.text = ""
-        guessWord.addCharactersSpacing(10)
         guessWord.textColor = .brown
         guessWord.sizeToFit()
         view.addSubview(guessWord)
@@ -179,9 +178,32 @@ class ViewController: UIViewController {
         }
         
         sender.isHidden = true
+        
+        if mistakesRemaining == 0 {
+            let ac = UIAlertController(
+                title: "The sloth got away!",
+                message: "The answer was \(answer?.word ?? "")",
+                preferredStyle: .alert
+            )
+            ac.view.tintColor = .brown
+            ac.addAction(UIAlertAction(title: "Try again", style: .default, handler: loadLevel))
+            present(ac, animated: true)
+        }
+        
+        if answer?.word == guess {
+            let ac = UIAlertController(
+                title: "\(answer?.word ?? "")",
+                message: "You guessed it! Hooray!",
+                preferredStyle: .alert
+            )
+            ac.view.tintColor = .brown
+            ac.addAction(UIAlertAction(title: "Next challenge", style: .default, handler: loadLevel))
+            present(ac, animated: true)
+        }
     }
     
-    func loadLevel() {
+    func loadLevel(_ action: UIAlertAction = UIAlertAction()) {
+        mistakesRemaining = 7
         for letter in letters {
             letter.isHidden = false
         }
@@ -196,6 +218,7 @@ class ViewController: UIViewController {
             hintsText += "\(index + 1). \(hint)\n"
         }
         hints.text = hintsText.trimmingCharacters(in: .whitespacesAndNewlines)
+        guessWord.addCharactersSpacing(10)
     }
     
 }
